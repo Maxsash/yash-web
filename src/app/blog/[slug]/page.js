@@ -1,7 +1,7 @@
-import { notFound } from 'next/navigation';
-import { CustomMDX } from '../../../components/Mdx';
-import { formatDate, getBlogPosts } from '../utils';
-import { baseUrl } from '@/app/sitemap';
+import { notFound } from "next/navigation";
+import { CustomMDX } from "../../../components/Mdx";
+import { formatDate, getBlogPosts } from "../utils";
+import { baseUrl } from "@/app/sitemap";
 
 export async function generateStaticParams() {
   const posts = getBlogPosts();
@@ -33,7 +33,7 @@ export function generateMetadata({ params }) {
     openGraph: {
       title,
       description,
-      type: 'article',
+      type: "article",
       publishedTime,
       url: `${baseUrl}/blog/${post.slug}`,
       images: [
@@ -43,7 +43,7 @@ export function generateMetadata({ params }) {
       ],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title,
       description,
       images: [ogImage],
@@ -59,14 +59,14 @@ export default function Blog({ params }) {
   }
 
   return (
-    <section>
+    <section className="max-w-2xl mx-auto px-4 py-12">
       <script
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BlogPosting',
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
             headline: post.metadata.title,
             datePublished: post.metadata.publishedAt,
             dateModified: post.metadata.publishedAt,
@@ -76,21 +76,19 @@ export default function Blog({ params }) {
               : `/og?title=${encodeURIComponent(post.metadata.title)}`,
             url: `${baseUrl}/blog/${post.slug}`,
             author: {
-              '@type': 'Person',
-              name: 'My Portfolio',
+              "@type": "Person",
+              name: "My Portfolio",
             },
           }),
         }}
       />
-      <h1 className="title font-semibold text-2xl tracking-tighter">
+      <h1 className="font-bold text-3xl text-gray-800 mb-4 tracking-tight">
         {post.metadata.title}
       </h1>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          {formatDate(post.metadata.publishedAt)}
-        </p>
+      <div className="flex justify-between items-center text-sm text-gray-500 mb-8">
+        <p>{formatDate(post.metadata.publishedAt)}</p>
       </div>
-      <article className="prose">
+      <article className="prose prose-lg prose-blue max-w-none">
         <CustomMDX source={post.content} />
       </article>
     </section>

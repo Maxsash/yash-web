@@ -17,8 +17,8 @@ function Table({ data }) {
   ));
 
   return (
-    <table>
-      <thead>
+    <table className="min-w-full border-collapse border border-gray-200">
+      <thead className="bg-gray-100">
         <tr>{headers}</tr>
       </thead>
       <tbody>{rows}</tbody>
@@ -26,30 +26,29 @@ function Table({ data }) {
   );
 }
 
-function CustomLink(props) {
-  const { href } = props;
+function CustomLink({ href, children, ...props }) {
 
   if (href.startsWith("/")) {
     return (
       <Link href={href} {...props}>
-        {props.children}
+        {children}
       </Link>
     );
   }
 
   if (href.startsWith("#")) {
-    return <a {...props}>{props.children}</a>;
+    return <a {...props}>{children}</a>;
   }
 
   return (
     <a target="_blank" rel="noopener noreferrer" {...props}>
-      {props.children}
+      {children}
     </a>
   );
 }
 
-function RoundedImage(props) {
-  return <Image alt={props.alt} className="rounded-lg" {...props} />;
+function RoundedImage({ alt, ...props }) {
+  return <Image alt={alt} className="rounded-lg" {...props} />;
 }
 
 function Code({ children, ...props }) {
@@ -58,14 +57,16 @@ function Code({ children, ...props }) {
 }
 
 function slugify(str) {
-  return str
+  const slugged = str
     .toString()
     .toLowerCase()
-    .trim() // Remove whitespace from both ends of a string
-    .replace(/\s+/g, "-") // Replace spaces with -
-    .replace(/&/g, "-and-") // Replace & with 'and'
-    .replace(/[^\w\-]+/g, "") // Remove all non-word characters except for -
-    .replace(/\-\-+/g, "-"); // Replace multiple - with single -
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/&/g, "-and-")
+    .replace(/[^\w\-]+/g, "")
+    .replace(/\-\-+/g, "-");
+
+  return slugged;
 }
 
 function createHeading(level) {
@@ -73,12 +74,12 @@ function createHeading(level) {
     const slug = slugify(children);
     return React.createElement(
       `h${level}`,
-      { id: slug },
+      { id: slug, className: "my-4" },
       [
         React.createElement("a", {
           href: `#${slug}`,
           key: `link-${slug}`,
-          className: "anchor",
+          className: "anchor text-blue-600 hover:text-blue-800",
         }),
       ],
       children
@@ -86,7 +87,6 @@ function createHeading(level) {
   };
 
   Heading.displayName = `Heading${level}`;
-
   return Heading;
 }
 
