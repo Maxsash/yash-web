@@ -1,5 +1,3 @@
-import Footer from "@/components/Footer";
-
 export default function Home() {
   return (
     <div>
@@ -10,9 +8,9 @@ export default function Home() {
           </h1>
           <p className="text-gray-600 text-lg">
             I am currently a full-time Web Developer at{" "}
-            <span className="font-semibold">NimbleWork Inc., Mumbai</span>. I like
-            trying out anything and everything, and I built this place to keep
-            track and showcase my doings.
+            <span className="font-semibold">NimbleWork Inc., Mumbai</span>. I
+            like trying out anything and everything, and I built this place to
+            keep track and showcase my doings.
           </p>
         </div>
       </main>
