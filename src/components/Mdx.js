@@ -17,8 +17,8 @@ function Table({ data }) {
   ));
 
   return (
-    <table className="min-w-full border-collapse border border-gray-200">
-      <thead className="bg-gray-100">
+    <table className="min-w-full border-collapse border border-secondary-200">
+      <thead className="bg-secondary-100">
         <tr>{headers}</tr>
       </thead>
       <tbody>{rows}</tbody>
@@ -79,7 +79,7 @@ function createHeading(level) {
         React.createElement("a", {
           href: `#${slug}`,
           key: `link-${slug}`,
-          className: "anchor text-blue-600 hover:text-blue-800",
+          className: "anchor text-secondary-600 hover:text-secondary-800",
         }),
       ],
       children

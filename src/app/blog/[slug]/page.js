@@ -82,10 +82,10 @@ export default function Blog({ params }) {
           }),
         }}
       />
-      <h1 className="font-bold text-3xl text-gray-800 mb-4 tracking-tight">
+      <h1 className="font-bold text-3xl text-primary-800 mb-4 tracking-tight">
         {post.metadata.title}
       </h1>
-      <div className="flex justify-between items-center text-sm text-gray-500 mb-8">
+      <div className="flex justify-between items-center text-sm text-primary-500 mb-8">
         <p>{formatDate(post.metadata.publishedAt)}</p>
       </div>
       <article className="prose prose-lg prose-blue max-w-none">
