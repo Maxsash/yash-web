@@ -25,8 +25,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-left min-h-screen pt-4 pb-4 gap-16 font-[family-name:var(--font-geist-sans)]">
-          <Header /> {children}
+        <div className="flex flex-col min-h-screen pt-4 pb-4 font-[family-name:var(--font-geist-sans)]">
+          <Header />
+          <main className="flex-grow">{children}</main>
           <Footer />
         </div>
       </body>
