@@ -12,7 +12,7 @@ export default function Page() {
         My Blog
       </h1>
       <p className="text-lg text-gray-600 mb-8">
-        Welcome to my blog! Here you'll find articles on various topics. Enjoy
+        Welcome to my blog! Here you&apos;ll find articles on various topics. Enjoy
         reading!
       </p>
       <div className="grid gap-6">
