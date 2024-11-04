@@ -27,7 +27,6 @@ function Table({ data }) {
 }
 
 function CustomLink({ href, children, ...props }) {
-
   if (href.startsWith("/")) {
     return (
       <Link href={href} {...props}>
@@ -38,6 +37,14 @@ function CustomLink({ href, children, ...props }) {
 
   if (href.startsWith("#")) {
     return <a {...props}>{children}</a>;
+  }
+
+  if (href.startsWith("http://") || href.startsWith("https://")) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
+        {children}
+      </a>
+    );
   }
 
   return (
