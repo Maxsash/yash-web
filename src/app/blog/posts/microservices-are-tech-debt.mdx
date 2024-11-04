@@ -1,0 +1,30 @@
+---
+title: 'Microservices are a Techincal Debt'
+publishedAt: '2024-11-01'
+summary: ''
+---
+
+## Why would you make a Microservice
+It is definitely worth it for companies like Google to go with microservice architecture. They have very mature tooling, they have been at this for longer than anybody. You can't take what happens at Google and take that as something that you might want to do. The scale is wildly different. Why would you take your monolithic application, single deployable artifact; Inside of it modules talk to each other by making function calls. What would make you decide to start making GRPC calls (network calls) instead of function calls? 
+
+As the company gets bigger, the scaling of traffic is usually not an issue. There are very high scale monoliths out there. What usually happens is: you have a lot of people working on the same code and they eventually start stepping on each other's toes and it's not while writing the code but while rolling it out. With the situation where nothing ever turns off, things are gonna change **slowly**. Developer writes code, it rolls out slowly. If you have few developers, this is manageable; but with 100 or more developers, somebody wants to make a change and they see that there's already a deployment ongoing. To solve this, one can plan a Relase Train. Everybody makes there changes over the day and all these changes together are deployed in a single release.
+Now what happens if one of those changes was bad? If you ship a bug, you got to roll everybody's change back. And this is a strong reason to do Microservices: You have a large engineering team and people are stepping on each other since they are making a lot of changes.
+
+## Developer Productivity
+Google Cloud's frontend is just one really big single page. When there's dozens of services on Google Cloud there is thousands of developers working on it and they ran into the same problem. If you are going to be deploying it, one team is going to break something for the other team and you are going to have to wait days, weeks. So they did something very interesting; they made that single page application deployable in independent units and it was all a matter of developer productivity, it had nothing to do with scale. It is a single page application, it will be served in the same way regardless.
+
+# Microservices are a Techincal Debt
+They do help you move faster at first. You don't have get involved in other teams' release process and their development. I wrote my code and I got it working; now just call me over RPC. 
+The problem is, now that this thing is running - it is part of call graph and it has to be **up**. A lot of microservices theory talks about loose coupling and fallbacks and if everything has to be up then maybe it should be a monolith, which maybe true.
+Everyone to a certain extent makes a distributed monolith whether they realise it or not, unless they **really** aggressively do fault injection; like all the things **have** to be up. One needs to understand that if the application is not able to follow one or more principles of microservice architecture then you can't simply just ignore that area and strictly follow the rest of the rulebook; that is called convinience. If an application is not able to align with the principles of a true microservice, which most might not, then one needs to carefully understand and have that flexibility to bend all the rules necessary. It is not essential that the rules be bent but that has to be a consideration.
+
+It's not black and white. It does help you develop faster but you basically borrowed against someone else's productivity in the future. It has a way of making certain kind of changes becomes expensive because you need to do multiple deployments across various microservice to make one change. 
+
+If we had a way of letting a thousand people make continuous changes while being sure that they are not breaking anything then we would just simply let them do that but that is the heart of the problem.
+
+## Programming principles
+One has to be curious about their craft and as good as the guiding principles are for the uninitiated - for building something we have to have an understanding of where those principles come from and not just that. We also need a good understanding of what we want to build and why. 
+
+This helps us in being flexible and creative and making decisions best suited for our specific circumstances.
+
+If an application is not able to align with the principles of a true microservice, which most might not, then we need to carefully understand and have that flexibility to bend all the rules necessary. It is not essential that the rules be bent but that has to be a consideration.
