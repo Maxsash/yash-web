@@ -11,16 +11,16 @@ export default function Hero() {
         </p>
         <div className={styles.socialLinks}>
           <a href="mailto:ctrl.alt.yash@gmail.com" className={styles.contactLink}>
-            ✉ ctrl.alt.yash@gmail.com
+            Email
           </a>
-          <a href="tel:+917000136567" className={styles.contactLink}>
-            ☎ +91 7000136567
+          <a href="https://instagram.com/_maxsash" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
+            Instagram
           </a>
           <a href="https://linkedin.com/in/maxsash" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
             LinkedIn
           </a>
-          <a href="https://github.com/maxsash" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
-            GitHub
+          <a href="https://maxsash.github.io/portfolio" className={styles.contactLink}>
+            Portfolio
           </a>
         </div>
       </div>
