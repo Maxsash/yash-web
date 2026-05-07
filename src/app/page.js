@@ -8,17 +8,17 @@ import styles from './page.module.css';
 export default function Home() {
   return (
     <div className={styles.page}>
-
-      <main className={styles.main}>
-        <section className={styles.top}>
+      <div className={styles.container}>
+        <header className={styles.left}>
           <Hero />
+        </header>
+        <main className={styles.right}>
           <About />
-        </section>
-
-        <Experience />
-        <Projects />
-        <Contact />
-      </main>
+          <Experience />
+          <Projects />
+          <Contact />
+        </main>
+      </div>
     </div>
   );
 }
