@@ -15,12 +15,16 @@
   margin-bottom: 3rem;
   color: var(--accent);
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .content {
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.7;
+  position: relative;
+  z-index: 2;
 }
 
 .content p {

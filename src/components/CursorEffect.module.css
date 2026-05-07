@@ -3,20 +3,17 @@
   top: 0;
   left: 0;
 
-  width: 70rem;
-  height: 70rem;
+  width: 500px;
+  height: 500px;
 
-  margin-left: -35rem;
-  margin-top: -35rem;
-  
   pointer-events: none;
   transform: translate3d(-50%, -50%, 0);
   border-radius: 50%;
-  background: radial-gradient(circle, rgb(235, 236, 239) 0%, rgba(246, 247, 249, 0) 100%);
+  background: radial-gradient(circle, rgb(235, 236, 239) 0%, rgba(20, 20, 20, 0) 100%);
 
-  filter: blur(30px);
+  filter: blur(20px);
   opacity: 0.85;
-  z-index: 9999;
+  z-index: 1;
   
   transition: width 0.15s ease, height 0.15s ease, opacity 0.15s ease;
   will-change: transform, opacity;

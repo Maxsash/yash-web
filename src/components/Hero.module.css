@@ -18,6 +18,8 @@
   font-weight: 700;
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
+  position: relative;
+  z-index: 2;
 }
 
 .title {
@@ -25,6 +27,8 @@
   font-weight: 600;
   margin-bottom: 2rem;
   color: var(--accent);
+  position: relative;
+  z-index: 2;
 }
 
 .description {
@@ -33,6 +37,8 @@
   margin-bottom: 2rem;
   max-width: 600px;
   margin-right: auto;
+  position: relative;
+  z-index: 3;
 }
 
 .socialLinks {
@@ -40,6 +46,8 @@
   justify-content: flex-start;
   gap: 2rem;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 3;
 }
 
 .socialLinks a {

@@ -15,11 +15,15 @@
   font-weight: 700;
   margin-bottom: 3rem;
   color: var(--accent);
+  position: relative;
+  z-index: 2;
 }
 
 .content {
   max-width: 600px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .content p {
@@ -41,6 +45,8 @@
   font-weight: 500;
   font-size: 1.1rem;
   transition: color 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .contactLink:hover {
