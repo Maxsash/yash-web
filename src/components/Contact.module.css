@@ -1,0 +1,71 @@
+.contact {
+  padding: 5rem 2rem;
+  background: #0a0a0a;
+  color: #ededed;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #64ffda;
+}
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.contactLinks {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contactLink {
+  color: #64ffda;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.contactLink:hover {
+  color: #52e3c2;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 3rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .contactLinks {
+    gap: 1.5rem;
+  }
+
+  .contactLink {
+    font-size: 1rem;
+  }
+}

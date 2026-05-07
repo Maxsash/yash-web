@@ -1,0 +1,48 @@
+.about {
+  padding: 5rem 2rem;
+  background: #0a0a0a;
+  color: #ededed;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #64ffda;
+  text-align: center;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 3rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+}
