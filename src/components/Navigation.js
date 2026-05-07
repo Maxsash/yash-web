@@ -38,6 +38,7 @@ export default function Navigation() {
     <nav className={styles.nav}>
       <div className={styles.container}>
         <div className={styles.logo} onClick={() => scrollToSection('hero')}>
+          <img src="/favicon-32x32.png" alt="Yash logo" className={styles.logoIcon} />
           Yash
         </div>
         <div className={styles.menu}>

@@ -19,6 +19,9 @@
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--accent);
@@ -28,6 +31,13 @@
 
 .logo:hover {
   color: var(--accent-hover);
+}
+
+.logoIcon {
+  width: 1.75rem;
+  height: 1.75rem;
+  display: block;
+  object-fit: contain;
 }
 
 .menu {
