@@ -10,9 +10,13 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <Navigation />
+
       <main className={styles.main}>
-        <Hero />
-        <About />
+        <section className={styles.top}>
+          <Hero />
+          <About />
+        </section>
+
         <Experience />
         <Projects />
         <Contact />
