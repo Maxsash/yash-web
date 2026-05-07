@@ -1,7 +1,7 @@
 .contact {
   padding: 5rem 2rem;
-  background: #0a0a0a;
-  color: #ededed;
+  background: var(--background);
+  color: var(--foreground);
 }
 
 .container {
@@ -14,7 +14,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 3rem;
-  color: #64ffda;
+  color: var(--accent);
 }
 
 .content {
@@ -26,7 +26,7 @@
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 2rem;
-  color: #ccc;
+  color: var(--text-secondary);
 }
 
 .contactLinks {
@@ -37,7 +37,7 @@
 }
 
 .contactLink {
-  color: #64ffda;
+  color: var(--accent);
   font-weight: 500;
   font-size: 1.1rem;
   transition: color 0.3s ease;

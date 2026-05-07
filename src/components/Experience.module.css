@@ -1,7 +1,7 @@
 .experience {
   padding: 5rem 2rem;
-  background: #0a0a0a;
-  color: #ededed;
+  background: var(--background);
+  color: var(--foreground);
 }
 
 .container {
@@ -13,7 +13,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 3rem;
-  color: #64ffda;
+  color: var(--accent);
   text-align: center;
 }
 
@@ -25,7 +25,7 @@
 .job {
   margin-bottom: 3rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid var(--border);
 }
 
 .job:last-child {
@@ -46,16 +46,16 @@
 .jobTitle {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #64ffda;
+  color: var(--accent);
 }
 
 .company {
-  color: #ccc;
+  color: var(--text-secondary);
 }
 
 .period {
   font-size: 0.9rem;
-  color: #888;
+  color: var(--text-muted);
   font-weight: 500;
 }
 
@@ -63,7 +63,7 @@
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  color: #ccc;
+  color: var(--text-secondary);
 }
 
 .technologies {
@@ -73,8 +73,8 @@
 }
 
 .tech {
-  background: #1a1a1a;
-  color: #64ffda;
+  background: var(--card-bg);
+  color: var(--accent);
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
   font-size: 0.85rem;

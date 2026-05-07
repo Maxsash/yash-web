@@ -16,10 +16,10 @@ export default function Hero() {
           <a href="tel:+917000136567" className={styles.contactLink}>
             ☎ +91 7000136567
           </a>
-          <a href="https://linkedin.com/in/yashshaw" target="_blank" rel="noopener noreferrer">
+          <a href="https://linkedin.com/in/maxsash" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
             LinkedIn
           </a>
-          <a href="https://github.com/yashshaw" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/maxsash" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
             GitHub
           </a>
         </div>

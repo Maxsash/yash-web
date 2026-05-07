@@ -1,7 +1,7 @@
 .projects {
   padding: 5rem 2rem;
-  background: #0a0a0a;
-  color: #ededed;
+  background: var(--background);
+  color: var(--foreground);
 }
 
 .container {
@@ -13,7 +13,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 3rem;
-  color: #64ffda;
+  color: var(--accent);
   text-align: center;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .project {
-  background: #1a1a1a;
+  background: var(--card-bg);
   border-radius: 0.5rem;
   padding: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -34,7 +34,7 @@
 
 .project:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px var(--shadow);
 }
 
 .projectContent {
@@ -47,14 +47,14 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #64ffda;
+  color: var(--accent);
 }
 
 .description {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  color: #ccc;
+  color: var(--text-secondary);
   flex-grow: 1;
 }
 
@@ -66,8 +66,8 @@
 }
 
 .tech {
-  background: #333;
-  color: #64ffda;
+  background: var(--card-bg);
+  color: var(--accent);
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   font-size: 0.8rem;
@@ -80,13 +80,13 @@
 }
 
 .link {
-  color: #64ffda;
+  color: var(--accent);
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .link:hover {
-  color: #52e3c2;
+  color: var(--accent-hover);
 }
 
 @media (max-width: 768px) {

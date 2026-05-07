@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --accent: #64ffda;
+  --background: #F7DBA7;
+  --foreground: #0B0A07;
+  --accent: #3D518C;
   --accent-hover: #52e3c2;
   --text-secondary: #ccc;
   --text-muted: #888;
@@ -44,7 +44,7 @@ a {
 }
 
 section {
-  scroll-margin-top: 70px; /* Account for fixed nav */
+  scroll-margin-top: 70px;
 }
 
 h1, h2, h3, h4, h5, h6 {

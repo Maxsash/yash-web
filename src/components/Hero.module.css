@@ -3,8 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #0a0a0a;
-  color: #ededed;
+  background: var(--background);
+  color: var(--foreground);
   padding: 0 2rem;
 }
 
@@ -24,7 +24,7 @@
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 2rem;
-  color: #64ffda;
+  color: var(--accent);
 }
 
 .description {
@@ -44,13 +44,13 @@
 }
 
 .socialLinks a {
-  color: #64ffda;
+  color: var(--accent);
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .socialLinks a:hover {
-  color: #52e3c2;
+  color: var(--accent-hover);
 }
 
 @media (max-width: 768px) {

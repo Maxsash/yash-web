@@ -3,10 +3,10 @@
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(10, 10, 10, 0.9);
+  background: var(--background);
   backdrop-filter: blur(10px);
   z-index: 1000;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid var(--border);
 }
 
 .container {
@@ -22,13 +22,13 @@
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #64ffda;
+  color: var(--accent);
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .logo:hover {
-  color: #52e3c2;
+  color: var(--accent-hover);
 }
 
 .menu {
@@ -39,7 +39,7 @@
 .menuItem {
   background: none;
   border: none;
-  color: #ccc;
+  color: var(--text-secondary);
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
@@ -49,7 +49,7 @@
 
 .menuItem:hover,
 .menuItem.active {
-  color: #64ffda;
+  color: var(--accent-hover);
 }
 
 .menuItem.active::after {
@@ -59,7 +59,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: #64ffda;
+  background: var(--accent-hover);
 }
 
 @media (max-width: 768px) {
