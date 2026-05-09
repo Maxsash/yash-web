@@ -16,11 +16,23 @@ export default function Hero() {
           <a href="https://instagram.com/_maxsash" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
             Instagram
           </a>
+          <a href="https://www.github.com/maxsash" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
+            GitHub
+          </a>
           <a href="https://linkedin.com/in/maxsash" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
             LinkedIn
           </a>
           <a href="https://maxsash.github.io/portfolio" className={styles.contactLink}>
             Portfolio
+          </a>
+          <a href="https://www.chess.com/member/maxsash" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
+            Chess.com
+          </a>
+          <a href="https://psnprofiles.com/Maxsash" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
+            PSN
+          </a>
+          <a href="https://www.goodreads.com/maxsash" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
+            Goodreads
           </a>
         </div>
       </div>

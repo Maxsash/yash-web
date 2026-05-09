@@ -14,9 +14,6 @@ export default function Home() {
         </header>
         <main className={styles.right}>
           <About />
-          <Experience />
-          <Projects />
-          <Contact />
         </main>
       </div>
     </div>

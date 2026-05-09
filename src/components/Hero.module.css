@@ -5,7 +5,8 @@
   justify-content: flex-start;
   background: var(--background);
   color: var(--foreground);
-  padding: 0 2rem;
+  padding-left: 2rem;
+  padding-top: 12rem;
 }
 
 .container {
