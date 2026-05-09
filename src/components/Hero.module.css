@@ -44,8 +44,9 @@
 
 .socialLinks {
   display: flex;
-  justify-content: flex-start;
-  gap: 2rem;
+  align-items: center;
+  gap: 4px;
+  margin-top: 1.5rem;
   flex-wrap: wrap;
   position: relative;
   z-index: 3;
@@ -59,6 +60,21 @@
 
 .socialLinks a:hover {
   color: var(--accent-hover);
+}
+
+.divider {
+  margin: 0 8px;
+  border-color: (var(--accent));
+}
+
+.contactLink {
+  color: inherit;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.contactLink:hover {
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
