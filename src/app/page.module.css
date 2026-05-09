@@ -9,26 +9,39 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 0 6rem;
-  justify-content: space-between;
+  padding: 0 1.25rem;
 }
 
 .left {
   width: 100%;
-  max-width: 600px;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
 }
 
 .right {
   width: 100%;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+/* ── Tablet ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding: 0 3rem;
+  }
+
+  .left {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  .right {
+    padding-bottom: 4rem;
+  }
 }
 
 /* ── Desktop: true sticky left, scrollable right ── */
 @media (min-width: 1024px) {
-  /* Lock the page itself from scrolling */
   :global(html),
   :global(body) {
     height: 100%;
@@ -37,13 +50,12 @@
 
   .container {
     flex-direction: row;
-    height: 100vh;        /* fill the viewport */
-    overflow: hidden;     /* prevent the container itself from scrolling */
+    height: 100vh;
+    overflow: hidden;
     padding: 0 6rem;
     gap: 0;
   }
 
-  /* Left panel: fixed height, does NOT scroll */
   .left {
     width: 48%;
     flex-shrink: 0;
@@ -57,28 +69,18 @@
     padding-right: 2rem;
   }
 
-  /* Right panel: scrolls independently */
   .right {
     width: 52%;
     height: 100%;
-    overflow-y: auto;     /* only this panel scrolls */
+    overflow-y: auto;
     padding-top: 6rem;
     padding-bottom: 6rem;
     padding-left: 2rem;
-
-    /* hide scrollbar visually (matches her site) */
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
 
   .right::-webkit-scrollbar {
     display: none;
-  }
-}
-
-/* ── Tablet ── */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .container {
-    padding: 0 3rem;
   }
 }
