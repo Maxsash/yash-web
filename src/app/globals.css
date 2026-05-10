@@ -23,6 +23,11 @@
   /*cursor-effect*/
   --cursor-primary: rgba(255, 248, 220, 0.95);
   --cursor-secondary: rgba(255, 220, 100, 0.15);
+
+  /* Weathering — warm browns derived from the paper palette */
+  --weather-corner: rgba(60, 40, 10, 1);   /* corner burn base, opacity set inline */
+  --weather-edge:   rgba(80, 55, 20, 1);   /* edge fade base, opacity set inline */
+  --weather-mask:   rgba(0, 0, 0, 0.4);    /* mask midpoint softness */
 }
 
 * {
@@ -46,6 +51,8 @@ body {
 }
 
 body {
+  position: relative;
+
   min-height: 100%;
   color: var(--foreground);
 
@@ -55,6 +62,43 @@ body {
   background-blend-mode: multiply;
 
   line-height: 1.65;
+}
+
+/* Weathered edge vignette */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+
+  background:
+    /* Corner burns */
+    radial-gradient(ellipse 60% 40% at 0%   0%,   color-mix(in srgb, var(--weather-corner) 28%, transparent) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 100% 0%,   color-mix(in srgb, var(--weather-corner) 28%, transparent) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 0%   100%, color-mix(in srgb, var(--weather-corner) 32%, transparent) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 100% 100%, color-mix(in srgb, var(--weather-corner) 32%, transparent) 0%, transparent 70%),
+
+    /* Edge fades */
+    linear-gradient(to bottom, color-mix(in srgb, var(--weather-edge) 18%, transparent) 0%, transparent 12%),
+    linear-gradient(to top,    color-mix(in srgb, var(--weather-edge) 22%, transparent) 0%, transparent 14%),
+    linear-gradient(to right,  color-mix(in srgb, var(--weather-edge) 14%, transparent) 0%, transparent 10%),
+    linear-gradient(to left,   color-mix(in srgb, var(--weather-edge) 14%, transparent) 0%, transparent 10%);
+
+  mask-image: radial-gradient(
+    ellipse 88% 85% at 50% 50%,
+    transparent 55%,
+    var(--weather-mask) 72%,
+    black 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 88% 85% at 50% 50%,
+    transparent 55%,
+    var(--weather-mask) 72%,
+    black 100%
+  );
+
+  mix-blend-mode: multiply;
 }
 
 /* Links feel like pen ink */

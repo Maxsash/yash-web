@@ -2,14 +2,14 @@ import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkIcon from '@mui/icons-material/Link';
+import BadgeIcon from '@mui/icons-material/Badge';
 import { ChessIcon, PSNIcon, GoodreadsIcon } from '@/components/icons/socialIcons';
 
 export const professionalLinks = [
   { label: 'Email',     href: 'mailto:ctrl.alt.yash@gmail.com',      icon: EmailIcon    },
   { label: 'GitHub',    href: 'https://www.github.com/maxsash',       icon: GitHubIcon,   external: true },
   { label: 'LinkedIn',  href: 'https://linkedin.com/in/maxsash',      icon: LinkedInIcon, external: true },
-  { label: 'Portfolio', href: 'https://maxsash.github.io/portfolio',  icon: LinkIcon,     external: true },
+  { label: 'Portfolio', href: 'https://maxsash.github.io/portfolio',  icon: BadgeIcon,    external: true },
 ];
 
 export const personalLinks = [
