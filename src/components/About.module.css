@@ -36,6 +36,19 @@
   margin-bottom: 0;
 }
 
+.cursor {
+  display: inline-block;
+  margin-left: 1px;
+  animation: blink 0.7s step-start infinite;
+  color: currentColor;
+  font-weight: 300;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
 @media (max-width: 768px) {
   .about {
     padding: 3rem 1rem;
