@@ -25,7 +25,7 @@ export default function Hero() {
                 aria-label={label}
                 size="small"
               >
-                <Icon fontSize="small" />
+                <Icon fontSize="large" />
               </IconButton>
             </Tooltip>
           ))}
@@ -42,7 +42,7 @@ export default function Hero() {
                 aria-label={label}
                 size="small"
               >
-                <Icon />
+                <Icon fontSize="large" />
               </IconButton>
             </Tooltip>
           ))}
