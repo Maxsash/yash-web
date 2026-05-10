@@ -3,13 +3,13 @@
   top: 0;
   left: 0;
 
-  width: 500px;
-  height: 500px;
+  width: 800px;
+  height: 800px;
 
   pointer-events: none;
   transform: translate3d(-50%, -50%, 0);
   border-radius: 50%;
-  background: radial-gradient(circle, rgb(235, 236, 239) 0%, rgba(20, 20, 20, 0) 100%);
+  background: radial-gradient(circle, var(--cursor-primary) 0%, var(--cursor-secondary) 35%, transparent 70%);
 
   filter: blur(20px);
   opacity: 0.85;

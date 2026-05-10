@@ -19,6 +19,10 @@
   /* Utility */
   --border: #D8D2C4;
   --line: #E3DDCF;
+
+  /*cursor-effect*/
+  --cursor-primary: rgba(255, 248, 220, 0.95);
+  --cursor-secondary: rgba(255, 220, 100, 0.15);
 }
 
 * {
