@@ -19,6 +19,7 @@
   /* Utility */
   --border: #D8D2C4;
   --line: #E3DDCF;
+}
 
 * {
   box-sizing: border-box;
